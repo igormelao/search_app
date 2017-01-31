@@ -1,0 +1,37 @@
+<div class="container"> 
+  <form role="form" action="/">
+    <h2 class="">Finding articles</h2>
+    <input id="keywords" type="text" class="form-control" placeholder="Ex: google" name="keywords">
+    <br>
+    <button class="btn btn-primary btn-block" type="submit">Search</button>
+    <br>
+  </form>
+
+  <br/>
+
+  <section class="articles">
+    <% if @articles.present? %>
+      <h2> Results</h2>
+      <% @articles.each do |article| %>
+        <div class="col-md-12">
+          <h4>Title: <%= article.title %></h4>
+          <p><em>Description:</em> <%= article.description %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+
+  <br/>
+
+  <section class="articles">
+    <% if @searches.present? %>
+      <h2> Analyse os searches </h2>
+      <% @searches.each do |search| %>
+        <div class="col-md-12">
+          <h4><%= "'#{search[0]} has #{search[1]} result " %></h4>
+        </div>
+      <% end %>
+    <% end %>
+  </section>   
+
+</div>
