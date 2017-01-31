@@ -39,3 +39,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
 end
+
+group :development do
+  gem 'pg', '~> 0.18'
+end
