@@ -11,7 +11,7 @@ gem 'searchkick'
 gem "searchjoy"
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-
+gem 'pg'
 group :development, :test do
   gem 'byebug'
 end
@@ -38,8 +38,4 @@ end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-end
-
-group :production do
-  gem 'pg', '~> 0.19.0'
 end
